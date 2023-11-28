@@ -1,22 +1,94 @@
+#container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'hero'
+    'companies'
+    'posts'
+    'jobs'
+    'footer';
+}
+
+#header {
+  grid-area: header;
+  color: #000;
+  background-color: #f3f5f0;
+
+  &.scrolled {
+    background-color: #fff;
+  }
+}
+
 #hero {
+  grid-area: hero;
   height: calc(100vh - var(--header-height));
-  background-color: darkolivegreen;
+  background-color: #f3f5f0;
+  padding: 0 var(--global-padding);
+  display: flex;
 
   & .left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    & .search-container {
+      background-color: #fff;
+      height: 3rem;
+
+      & .icon {
+      }
+
+      & input {
+        border: 0;
+        outline: none;
+      }
+
+      & button {
+      }
+    }
   }
 
   & .right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+      object-position: 70% center;
+    }
   }
 }
 
-#main {
-  & section {
-    margin-top: 5rem;
-    background-color: indianred;
-    min-height: 80vh;
-  }
+#top-companies,
+#recent-jobs,
+#recent-posts {
+  margin-top: 5rem;
+  background-color: indianred;
+  min-height: 80vh;
+}
+
+#top-companies {
+  grid-area: companies;
+}
+
+#recent-jobs {
+  grid-area: jobs;
+}
+
+#recent-posts {
+  grid-area: posts;
 }
 
 #footer {
+  height: 120px;
+  background-color: crimson;
   margin-top: 5rem;
 }
