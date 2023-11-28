@@ -1,0 +1,22 @@
+#hero {
+  height: calc(100vh - var(--header-height));
+  background-color: darkolivegreen;
+
+  & .left {
+  }
+
+  & .right {
+  }
+}
+
+#main {
+  & section {
+    margin-top: 5rem;
+    background-color: indianred;
+    min-height: 80vh;
+  }
+}
+
+#footer {
+  margin-top: 5rem;
+}
