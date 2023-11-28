@@ -1,0 +1,86 @@
+:root {
+  --background: 0, 0, 100%;
+  --foreground: 0, 0, 0%;
+
+  --primary: 145, 63%, 49%;
+  --primary-foreground: 0, 0%, 0%;
+
+  --secondary: 325, 63%, 49%;
+  --secondary-foreground: 0, 0%, 100%;
+
+  --header-height: 64px;
+  --global-padding: max(2px, calc(100% / 12));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  --bg: transparent;
+  --text: inherit;
+  --hover-bg: var(--bg-color, transparent);
+  --hover-text: var(--primary-foreground, inherit);
+
+  background-color: var(--bg-color);
+  color: var(--color);
+  border: 0;
+  border-radius: 0.375rem;
+  transition: background-color 150ms, color 150ms;
+
+  &:hover {
+    background-color: hsl(var(--hover-bg));
+    color: hsl(var(--hover-text));
+  }
+
+  &.primary {
+    --bg-color: hsl(var(--primary));
+    --color: var(--primary-foreground);
+  }
+
+  &.secondary {
+    --bg-color: hsl(var(--secondary));
+    --color: var(--secondary-foreground);
+  }
+
+  &.outline {
+    border: 1px solid hsl(var(--foreground));
+    --bg-color: transparent;
+    --color: hsl(var(--foreground));
+  }
+
+  &.ghost {
+  }
+
+  &.link {
+  }
+}
+
+#header {
+  height: var(--header-height);
+  padding: 0 var(--global-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #nav {
+    & ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      text-transform: uppercase;
+    }
+  }
+}
