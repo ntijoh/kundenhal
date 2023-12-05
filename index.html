@@ -19,21 +19,23 @@
     <div id="container">
       <header id="header">
         <div class="left">
-          <a href="/" id="logo">CareerCrafters</a>
+          <a href="/" id="logo">
+            <span class="primary">Career</span>Crafters
+          </a>
 
           <nav id="nav">
             <ul>
-              <li><a class="btn ghost" href="/">Home</a></li>
-              <li><a class="btn ghost" href="#">Jobs</a></li>
-              <li><a class="btn ghost" href="#">Blog</a></li>
-              <li><a class="btn ghost" href="#">Contact</a></li>
-              <li><a class="btn ghost" href="#">About</a></li>
+              <li><a class="btn link active" href="/">Home</a></li>
+              <li><a class="btn link" href="#">Jobs</a></li>
+              <li><a class="btn link" href="#">Blog</a></li>
+              <li><a class="btn link" href="#">Contact</a></li>
+              <li><a class="btn link" href="#">About</a></li>
             </ul>
           </nav>
         </div>
 
         <div class="right">
-          <a href="#" class="btn secondary">Log in</a>
+          <a href="#" class="btn ghost">Log in</a>
 
           <a href="#" class="btn primary">Sign up</a>
         </div>
@@ -41,27 +43,31 @@
 
       <div id="hero">
         <div class="left">
-          <h1>Lorem ipsum dolor sit amet</h1>
-          <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur, ad?
-          </h3>
+          <h1>Find The <span class="underline">Perfect</span> Job Near You</h1>
 
           <form class="search-container" action="/jobs.html">
-            <i class="icon">search</i>
-            <input
-              type="text"
-              name="q"
-              id="q"
-              title="Search for a job"
-              placeholder="Keywords / Job title"
-            />
+            <div class="search-input">
+              <i class="icon">search</i>
+              <input
+                type="text"
+                name="q"
+                id="q"
+                title="Search for a job"
+                placeholder="Keywords / Job title"
+              />
+            </div>
             <button type="submit" class="btn primary">Find Jobs</button>
           </form>
+
+          <p>
+            <strong>Popular searches</strong>: <a href="#">Web</a>,
+            <a href="#">Developer</a>, <a href="#">Designer</a>,
+            <a href="#">iOS</a>,
+            <a href="#">Embedded</a>
+          </p>
         </div>
 
         <div class="right">
-          <!-- <img src="https://placehold.co/500x700" alt="Hero image" /> -->
           <img src="img/hero.jpg" alt="Person sitting in front of a laptop" />
         </div>
       </div>

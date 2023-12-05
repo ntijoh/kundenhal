@@ -1,4 +1,6 @@
 #container {
+  // background-color: #ededed;
+  background-color: #f3f5f0;
   display: grid;
   grid-template-areas:
     'header'
@@ -13,8 +15,12 @@
   grid-area: header;
   color: #000;
 
-  &.scrolled {
-    background-color: #fff;
+  & #logo {
+    font-weight: bold;
+
+    .primary {
+      color: hsl(var(--primary));
+    }
   }
 }
 
@@ -32,19 +38,55 @@
     justify-content: center;
     gap: 2rem;
 
+    & h1 {
+      font-size: 4rem;
+
+      & .underline {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+    }
+
+    & > p > a:hover {
+      text-decoration: underline;
+    }
+
     & .search-container {
-      background-color: #fff;
+      display: flex;
       height: 3rem;
+      width: 100%;
+      gap: 0.5rem;
 
-      & .icon {
+      & .search-input {
+        background-color: #fff;
+        // background-color: hsl(var(--secondary));
+        // border: 1px solid hsl(var(--border));
+        // background-color: hsl(var(--input));
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-inline: 0.5rem 1rem;
+        border-radius: var(--radius);
+
+        & .icon {
+          margin-right: 0.5rem;
+          color: rgba(0, 0, 0, 0.3);
+        }
+
+        & input {
+          border: 0;
+          outline: none;
+          height: 100%;
+          width: 100%;
+          display: inline-block;
+          background-color: transparent;
+          font-size: 1.1rem;
+        }
       }
 
-      & input {
-        border: 0;
-        outline: none;
-      }
-
-      & button {
+      & > button[type='submit'] {
+        height: 100%;
       }
     }
   }
@@ -61,6 +103,7 @@
       height: 80%;
       object-fit: cover;
       object-position: 70% center;
+      border-radius: var(--radius);
     }
   }
 }
