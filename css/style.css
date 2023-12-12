@@ -1,0 +1,256 @@
+
+*{
+    scroll-behavior: smooth;
+ /*  Index CSS code  */
+}
+body {
+    margin: 0;
+    background: rgb(33,150,243);
+    background: radial-gradient(circle, rgba(33,150,243,1) 0%, rgb(9, 11, 140) 100%);
+}
+#main_wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 10% 90% 10% 90% 90% 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'hd hd nv'
+    'main main main'
+    'void void void'
+    'sc1 sc1 sc1'
+    'sc2 sc2 sc2'
+    'ft ft ft'
+    ;
+}
+header {
+    display: flex;
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 10%;
+    top: 0;
+    transition: top 0.3s;
+    align-items: center;
+    padding-left: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2196F3;
+    box-shadow: 0px 10px 20px;
+}
+header.visible {
+    top: -100%;
+}
+nav {
+    display: flex;
+    position: fixed;
+    right: 0px;
+    align-items:flex-end;
+    justify-content: flex-end;
+}
+#button {
+    justify-content: center; 
+    position: absolute;
+    bottom: 0px;
+}
+#void {
+    grid-area: void;
+}
+#landing {
+    display: flex;
+    background-image: url(../img/Background_Wunderlust.png);
+    background-repeat: no-repeat;
+    background-size: 100vw  100vh;
+    grid-area: main;
+    justify-content: center;
+}
+
+section {
+    margin: 20px;
+    border-radius: 20px;
+    padding: 1.5%;
+    background-color:white;
+}
+/* PROFILE SECTION 1 */
+#profile_1 {
+    display: flex;
+    grid-area: sc1;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+}
+#PFP{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    height: 50%;
+}
+#PFP img{
+    width: 100px;
+    height: 100px;
+}
+#PFP 
+#img1_P1 {
+    width: 33.33%;
+    height: 50%;
+}
+#img1_P1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+#img2_P1{
+    width: 33.33%;
+    height: 50%;
+}
+#img2_P1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+}
+#Para_P1 {
+    width: 50%;
+    height: 50%;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    border-color: rgb(33,150,243);
+}
+#img3_P1 {
+    width: 45%;
+    height: 50%;
+}
+#img3_P1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+}
+#profile_1 h2{
+    text-decoration: underline;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    padding-top: 5px;
+}
+/* PROFILE SECTION 1 */
+
+/* PROFILE SECTION 2 */
+#profile_2 {
+    display: flex;
+    grid-area: sc2;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    flex-direction: column;
+}
+#PFP2{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    height: 50%;
+}
+#PFP2 img{
+    width: 100px;
+    height: 100px;
+}
+#img1_P2 {
+    width: 33.33%;
+    height: 50%;
+}
+#img1_P2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 00px 0px;
+}
+#img2_P2{
+    width: 34%;
+    height: 50%;
+}
+#img2_P2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+#Para_P2 {
+    width: 30%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    border-color: rgb(33,150,243);
+}
+#img3_P2 {
+    width: 33.33%;
+    height: 50%;
+}
+#img3_P2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 20px 0px;
+}
+#profile_2 h2{
+    text-decoration: underline;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    padding-top: 5px;
+}
+/* PROFILE SECTION 2 */
+footer {
+    grid-area: ft;
+    background-color: white;
+}
+/*  Index CSS code */ 
+
+
+/* Profile CSS code */
+#profile_wrapper {
+    height: 100vh;
+    width: calc(100vw-20px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 20% 10% 60% 60% 60% 60% 10%;
+    grid-template-areas: 
+    'hd nv'
+    'pf pf'
+    'bt bt'
+    'sc1 sc2'
+    'sc3 sc4'
+    'sc5 sc6'
+    'sc7 sc8'
+    'ft ft'
+    ;
+}
+#pfp_pro{
+    grid-area: pf;
+}
+#button_pro {
+    grid-area: bt;
+}
+#sc1_pro  {
+    grid-area: sc1;
+}
+#sc2_pro  {
+    grid-area: sc2;
+}
+#sc3_pro  {
+    grid-area: sc3;
+}
+#sc4_pro  {
+    grid-area: sc4;
+}
+#sc5_pro  {
+    grid-area: sc5;
+}
+#sc6_pro  {
+    grid-area: sc6;
+}
+#sc7_pro  {
+    grid-area: sc7;
+}
+#sc8_pro  {
+    grid-area: sc8;
+}
